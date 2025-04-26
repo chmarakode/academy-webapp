@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', Arial, sans-serif;
-            background: #ffffff; /* <-- БЕЛЫЙ ФОН */
+            background: #ffffff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,7 +18,7 @@
 
         .card {
             background: #ffffff;
-            margin-top: 50px;
+            margin-top: 40px;
             padding: 40px 30px;
             border-radius: 20px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
@@ -41,14 +41,31 @@
             line-height: 1.5;
         }
 
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%; /* начальная ширина */
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
         .buttons {
             margin-top: 30px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .button-return {
+        .button-return, .button-back {
             display: inline-block;
             padding: 15px 30px;
             font-size: 18px;
@@ -63,13 +80,12 @@
             overflow: hidden;
         }
 
-        .button-return:hover {
+        .button-return:hover, .button-back:hover {
             background: linear-gradient(135deg, #66BB6A, #388E3C);
             transform: translateY(-3px);
             box-shadow: 0 12px 20px rgba(0,0,0,0.2);
         }
 
-        /* Анимация загрузки */
         .button-return.loading::after {
             content: ' ⏳ Переход...';
             position: absolute;
@@ -100,8 +116,12 @@
 <body>
 
     <div class="card">
-        <h1>Модуль 01 ➕ Сложение</h1>
+        <h1 id="moduleTitle">Модуль 01 ➕ Сложение</h1>
         <p>Изучи теорию сложения чисел!<br> Это основа всей математики. 📚</p>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
 
         <p><strong>Примеры:</strong><br>
         7 + 8 = 15<br>
@@ -111,16 +131,30 @@
             <a href="https://t.me/zm99bybot" class="button-return" id="returnButton">
                 📷 Вернуться в бот и отправить домашку
             </a>
+            <a href="javascript:history.back()" class="button-back">
+                🔙 Назад
+            </a>
         </div>
     </div>
 
     <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
 
     <script>
+        // Анимация загрузки
         const button = document.getElementById('returnButton');
         button.addEventListener('click', function () {
             this.classList.add('loading');
         });
+
+        // Автоматический прогресс по модулю
+        const moduleNumber = 1; // Здесь ставишь номер модуля
+        const totalModules = 10; // Общее количество модулей
+        const progress = Math.min((moduleNumber / totalModules) * 100, 100);
+
+        document.getElementById('progressBar').style.width = progress + '%';
+
+        // При желании можно динамически менять заголовок тоже:
+        // document.getElementById('moduleTitle').innerText = `Модуль ${moduleNumber} ➕ Сложение`;
     </script>
 
 </body>
