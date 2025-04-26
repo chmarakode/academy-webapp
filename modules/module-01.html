@@ -2,60 +2,126 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Модуль 01 ➕ Сложение</title>
+    <title>Модуль 01 — Сложение</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #ffffff; /* <-- БЕЛЫЙ ФОН */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            margin-top: 50px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .button-return {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button-return:hover {
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Анимация загрузки */
+        .button-return.loading::after {
+            content: ' ⏳ Переход...';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.4);
+            font-size: 16px;
+            color: white;
+        }
+
+        footer {
+            margin: 20px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Модуль 01 ➕ Сложение</h1>
-        <p>Изучи теорию сложения чисел!</p>
-        <p><strong>Пример:</strong><br>7 + 8 = 15<br>23 + 17 = 40</p>
 
-        <div class="modules">
-            <button onclick="sendHomework()">📸 Отправить домашку</button>
-            <button onclick="nextModule()">➡️ Следующий модуль</button>
-            <button onclick="backToBot()">🏠 Вернуться к боту</button>
+    <div class="card">
+        <h1>Модуль 01 ➕ Сложение</h1>
+        <p>Изучи теорию сложения чисел!<br> Это основа всей математики. 📚</p>
+
+        <p><strong>Примеры:</strong><br>
+        7 + 8 = 15<br>
+        23 + 17 = 40</p>
+
+        <div class="buttons">
+            <a href="https://t.me/zm99bybot" class="button-return" id="returnButton">
+                📷 Вернуться в бот и отправить домашку
+            </a>
         </div>
     </div>
 
+    <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
+
     <script>
-        function sendHomework() {
-            Telegram.WebApp.sendData("homework_module_1");
-            Telegram.WebApp.close();
-        }
-
-        function nextModule() {
-            window.location.href = "module-02.html";
-        }
-
-        function backToBot() {
-            Telegram.WebApp.close();
-        }
+        const button = document.getElementById('returnButton');
+        button.addEventListener('click', function () {
+            this.classList.add('loading');
+        });
     </script>
-    <script>
-    function sendHomework() {
-        if (Telegram.WebApp) {
-            Telegram.WebApp.sendData("homework_module_1");
-            console.log("[✅] Данные отправлены в Telegram: homework_module_1");
-
-            Telegram.WebApp.close();
-            console.log("[✅] Мини-апп закрыт после отправки данных");
-        } else {
-            console.error("[❌] Telegram.WebApp не доступен! Ты не в Telegram браузере?");
-        }
-    }
-
-    function nextModule() {
-        window.location.href = "module-02.html";
-    }
-
-    function backToBot() {
-        Telegram.WebApp.close();
-        console.log("[✅] Мини-апп закрыт вручную");
-    }
-</script>
 
 </body>
 </html>
