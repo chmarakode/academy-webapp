@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поздравляем!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 32px;
+            color: #2E7D32;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        .button-back {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .button-back:hover {
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
+            transform: translateY(-3px);
+        }
+        footer {
+            margin: 20px 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        video {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎓 Поздравляем!</h1>
+        <p>Ты успешно завершил курс NailDoza Academy! 🚀<br><br>
+        Мы гордимся твоим успехом и желаем дальнейших побед!</p>
+
+        <video controls>
+            <source src="final_congrats.mp4" type="video/mp4">
+            Твой браузер не поддерживает воспроизведение видео.
+        </video>
+
+        <a href="https://t.me/zm99bybot" class="button-back">🏠 Вернуться в бот</a>
+    </div>
+
+    <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
+
+</body>
+</html>
