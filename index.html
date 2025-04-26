@@ -2,79 +2,31 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Добро пожаловать в NailDoza Academy!</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 450px;
-            width: 90%;
-            margin-bottom: 20px;
-        }
-        .card h1 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #222;
-        }
-        .card p {
-            margin-bottom: 30px;
-            font-size: 18px;
-            color: #555;
-        }
-        .highlight {
-            font-weight: bold;
-            color: #4CAF50;
-        }
-        .btn {
-            padding: 12px 25px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        footer {
-            margin-top: 10px;
-            font-size: 12px;
-            color: #aaa;
-        }
-    </style>
+    <title>NailDoza Academy 🚀</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="card">
+    <div class="container">
         <h1>Добро пожаловать в<br>NailDoza Academy! 🎓</h1>
-        <p>
-            <span class="highlight">NailDoza Academy</span> — это не просто школа.  
-            Это место, где рождаются настоящие профессионалы!
-        </p>
-        <p>
-            Наши <span class="highlight">преподаватели</span> — лучшие мастера индустрии,  
-            готовые делиться опытом и вдохновлять тебя каждый день! 🌟
-        </p>
-        <p>Твое увлекательное обучение начинается прямо сейчас! 🚀</p>
-        <a class="btn" href="https://t.me/zm99bybot">🚀 Вернуться к боту</a>
+        <p>Выбери модуль для начала обучения:</p>
+
+        <div class="modules">
+            <button onclick="openModule(1)">Модуль 1 ➕ Сложение</button>
+            <button onclick="openModule(2)">Модуль 2 ➖ Вычитание</button>
+            <button onclick="openModule(3)">Модуль 3 ✖️ Умножение</button>
+            <button onclick="openModule(4)">Модуль 4 ➗ Деление</button>
+        </div>
     </div>
 
-    <footer>© 2025 NailDoza Academy — Твое будущее начинается здесь!</footer>
+    <script>
+        function openModule(moduleNumber) {
+            window.location.href = `module-0${moduleNumber}.html`;
+        }
+    </script>
 </body>
 </html>
+
 
 
