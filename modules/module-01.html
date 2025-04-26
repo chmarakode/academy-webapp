@@ -2,83 +2,38 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Модуль 01 — Сложение</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            margin: 30px 0;
-            animation: fadeIn 1s ease;
-        }
-        .card h1 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #222;
-        }
-        .card p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #555;
-            line-height: 1.5;
-        }
-        .buttons {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .btn {
-            padding: 12px 25px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        footer {
-            margin: 20px 0;
-            font-size: 12px;
-            color: #aaa;
-        }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-    </style>
+    <title>Модуль 01 ➕ Сложение</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="card">
-        <h1>Модуль 01: Основы сложения ➕</h1>
-        <p>В этом модуле ты узнаешь, как складывать числа быстро и правильно.<br> Сложение — это базовый навык, на котором строится вся математика!</p>
-        
-        <p><strong>Пример:</strong><br> 7 + 8 = 15<br> 23 + 17 = 40</p>
+    <div class="container">
+        <h1>Модуль 01 ➕ Сложение</h1>
+        <p>Изучи теорию сложения чисел!</p>
+        <p><strong>Пример:</strong><br>7 + 8 = 15<br>23 + 17 = 40</p>
 
-        <div class="buttons">
-            <a class="btn" href="https://t.me/zm99bybot?start=homework_module_1">📸 Отправить домашку</a>
-            <a class="btn" href="https://chmarakode.github.io/academy-webapp/module-02.html">➡️ Перейти к следующему модулю</a>
-            <a class="btn" href="https://t.me/zm99bybot">🏠 Вернуться к боту</a>
+        <div class="modules">
+            <button onclick="sendHomework()">📸 Отправить домашку</button>
+            <button onclick="nextModule()">➡️ Следующий модуль</button>
+            <button onclick="backToBot()">🏠 Вернуться к боту</button>
         </div>
     </div>
 
-    <footer>© 2025 NailDoza Academy</footer>
+    <script>
+        function sendHomework() {
+            Telegram.WebApp.sendData("homework_module_1");
+            Telegram.WebApp.close();
+        }
+
+        function nextModule() {
+            window.location.href = "module-02.html";
+        }
+
+        function backToBot() {
+            Telegram.WebApp.close();
+        }
+    </script>
 </body>
 </html>
+
