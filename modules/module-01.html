@@ -34,6 +34,29 @@
             Telegram.WebApp.close();
         }
     </script>
+    <script>
+    function sendHomework() {
+        if (Telegram.WebApp) {
+            Telegram.WebApp.sendData("homework_module_1");
+            console.log("[✅] Данные отправлены в Telegram: homework_module_1");
+
+            Telegram.WebApp.close();
+            console.log("[✅] Мини-апп закрыт после отправки данных");
+        } else {
+            console.error("[❌] Telegram.WebApp не доступен! Ты не в Telegram браузере?");
+        }
+    }
+
+    function nextModule() {
+        window.location.href = "module-02.html";
+    }
+
+    function backToBot() {
+        Telegram.WebApp.close();
+        console.log("[✅] Мини-апп закрыт вручную");
+    }
+</script>
+
 </body>
 </html>
 
