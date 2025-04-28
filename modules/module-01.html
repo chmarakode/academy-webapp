@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наращивание дип-пудрой - NailDoza Academy</title>
+    <title>Модуль: Наращивание дип-пудрой</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', Arial, sans-serif;
             background: #ffffff;
-            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -20,47 +19,25 @@
         .header {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
             width: 100%;
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
             color: white;
-            animation: fadeIn 1.5s ease;
+        }
+        .header img {
+            width: 100px;
+            margin-bottom: 10px;
         }
         .header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 30px;
         }
         .header p {
             margin-top: 10px;
             font-size: 18px;
-            font-weight: 300;
         }
         .content {
             padding: 20px;
             max-width: 800px;
-            animation: fadeIn 2s ease;
-        }
-        .content h2 {
-            color: #2E7D32;
-            margin-top: 30px;
-        }
-        .content p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        .progress-container {
-            width: 90%;
-            background: #e0e0e0;
-            border-radius: 10px;
-            margin: 30px 0;
-            height: 20px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            height: 100%;
-            width: 90%;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            border-radius: 10px;
-            transition: width 0.5s ease;
         }
         .button-homework {
             display: inline-block;
@@ -69,10 +46,13 @@
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
             color: white;
             font-weight: bold;
+            font-size: 18px;
             text-decoration: none;
             border-radius: 10px;
+            border: none;
             box-shadow: 0 8px 15px rgba(0,0,0,0.1);
             transition: background 0.3s ease;
+            cursor: pointer;
         }
         .button-homework:hover {
             background: linear-gradient(135deg, #66BB6A, #388E3C);
@@ -82,60 +62,34 @@
             font-size: 12px;
             color: #aaa;
         }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
     </style>
 </head>
 <body>
 
     <div class="header">
+        <img src="https://chmarakode.github.io/academy-webapp/naildoza_logo.webp" alt="NailDoza Academy">
         <h1>Курс: Наращивание дип-пудрой</h1>
-        <p>От основ до профессиональной практики с NailDoza Academy</p>
-    </div>
-
-    <div class="progress-container">
-        <div class="progress-bar"></div>
+        <p>От основ до профессиональной практики</p>
     </div>
 
     <div class="content">
-        <h2>О курсе</h2>
-        <p>На этом курсе ты узнаешь:</p>
-        <ul>
-            <li>Зачем используются DUAL FORMS</li>
-            <li>Преимущества метода дип-пудры</li>
-            <li>Работа с продуктами Lart</li>
-            <li>Подбор правильных форм</li>
-            <li>Техника наращивания без ошибок</li>
-            <li>Коррекцию и финишное покрытие</li>
-        </ul>
-
-        <h2>Основные моменты</h2>
-        <p>DUAL FORMS позволяют добиться идеального результата быстро и качественно.</p>
-        <p>Секрет в правильном подборе формы под ноготь клиента и точной работе с материалами.</p>
-        
-        <h2>Техника</h2>
-        <p>Пошаговая работа с группами ногтей, техника выравнивания, корректное снятие и коррекция.</p>
-
-        <h2>Финиш</h2>
-        <p>Полировка, финишное покрытие и уход за ногтями.</p>
+        <h2>Поздравляем с началом обучения!</h2>
+        <p>Изучи модуль и отправь свою домашнюю работу через бот.</p>
 
         <button class="button-homework" onclick="openTelegramBot()">📷 Отправить домашку</button>
-
-        <script>
-        function openTelegramBot() {
-            if (window.Telegram.WebApp) {
-                Telegram.WebApp.openTelegramLink('https://t.me/zm99bybot');
-            } else {
-                window.open('https://t.me/zm99bybot', '_blank'); // запасной вариант для браузеров
-            }
-        }
-        </script>
-
     </div>
 
     <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
+
+    <script>
+    function openTelegramBot() {
+        if (window.Telegram && Telegram.WebApp) {
+            Telegram.WebApp.openTelegramLink('https://t.me/zm99bybot');
+        } else {
+            window.open('https://t.me/zm99bybot', '_blank');
+        }
+    }
+    </script>
 
 </body>
 </html>
