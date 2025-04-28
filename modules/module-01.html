@@ -1,98 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Модуль 01 — Сложение</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наращивание дип-пудрой - NailDoza Academy</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', Arial, sans-serif;
             background: #ffffff;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
-        .card {
-            background: #ffffff;
-            margin-top: 40px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            width: 100%;
+            padding: 40px 20px;
             text-align: center;
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease;
+            color: white;
+            animation: fadeIn 1.5s ease;
         }
-        h1 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #222;
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
         }
-        p {
-            margin-bottom: 20px;
+        .header p {
+            margin-top: 10px;
             font-size: 18px;
-            color: #444;
-            line-height: 1.5;
+            font-weight: 300;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            animation: fadeIn 2s ease;
+        }
+        .content h2 {
+            color: #2E7D32;
+            margin-top: 30px;
+        }
+        .content p {
+            margin: 10px 0;
+            line-height: 1.6;
         }
         .progress-container {
-            width: 100%;
-            background-color: #e0e0e0;
+            width: 90%;
+            background: #e0e0e0;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 30px 0;
             height: 20px;
             overflow: hidden;
         }
         .progress-bar {
             height: 100%;
-            width: 0%;
+            width: 90%;
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
             border-radius: 10px;
             transition: width 0.5s ease;
         }
-        .buttons {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .button-return, .button-back {
+        .button-homework {
             display: inline-block;
+            margin-top: 30px;
             padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 600;
-            color: #fff;
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .button-return:hover, .button-back:hover {
-            background: linear-gradient(135deg, #66BB6A, #388E3C);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
-        }
-        .button-return.loading::after {
-            content: ' ⏳ Переход...';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.4);
-            font-size: 16px;
             color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transition: background 0.3s ease;
+        }
+        .button-homework:hover {
+            background: linear-gradient(135deg, #66BB6A, #388E3C);
         }
         footer {
-            margin: 20px 0;
+            margin: 30px 0;
             font-size: 12px;
             color: #aaa;
         }
@@ -104,43 +90,41 @@
 </head>
 <body>
 
-    <div class="card">
-        <h1 id="moduleTitle"></h1>
-        <p id="moduleText"></p>
+    <div class="header">
+        <h1>Курс: Наращивание дип-пудрой</h1>
+        <p>От основ до профессиональной практики с NailDoza Academy</p>
+    </div>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
 
-        <p><strong>Примеры:</strong><br>
-        7 + 8 = 15<br>
-        23 + 17 = 40</p>
+    <div class="content">
+        <h2>О курсе</h2>
+        <p>На этом курсе ты узнаешь:</p>
+        <ul>
+            <li>Зачем используются DUAL FORMS</li>
+            <li>Преимущества метода дип-пудры</li>
+            <li>Работа с продуктами Lart</li>
+            <li>Подбор правильных форм</li>
+            <li>Техника наращивания без ошибок</li>
+            <li>Коррекцию и финишное покрытие</li>
+        </ul>
 
-        <div class="buttons">
-            <a href="https://t.me/zm99bybot" class="button-return" id="returnButton">
-                📷 Вернуться в бот и отправить домашку
-            </a>
-        </div>
+        <h2>Основные моменты</h2>
+        <p>DUAL FORMS позволяют добиться идеального результата быстро и качественно.</p>
+        <p>Секрет в правильном подборе формы под ноготь клиента и точной работе с материалами.</p>
+        
+        <h2>Техника</h2>
+        <p>Пошаговая работа с группами ногтей, техника выравнивания, корректное снятие и коррекция.</p>
+
+        <h2>Финиш</h2>
+        <p>Полировка, финишное покрытие и уход за ногтями.</p>
+
+        <a href="https://t.me/zm99bybot" class="button-homework">📷 Отправить домашку</a>
     </div>
 
     <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
 
-    <script>
-        const moduleNumber = 1;
-        const totalModules = 10;
-        const progress = Math.min((moduleNumber / totalModules) * 100, 100);
-
-        document.getElementById('progressBar').style.width = progress + '%';
-        document.getElementById('moduleTitle').innerText = `Модуль ${moduleNumber} ➕ Сложение`;
-        document.getElementById('moduleText').innerText = "Изучи теорию сложения чисел! Это основа всей математики. 📚";
-
-        // Анимация загрузки
-        const button = document.getElementById('returnButton');
-        button.addEventListener('click', function () {
-            this.classList.add('loading');
-        });
-    </script>
-
 </body>
 </html>
-
