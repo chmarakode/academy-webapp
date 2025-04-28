@@ -121,7 +121,18 @@
         <h2>Финиш</h2>
         <p>Полировка, финишное покрытие и уход за ногтями.</p>
 
-        <a href="https://t.me/zm99bybot" class="button-homework">📷 Отправить домашку</a>
+        <button class="button-homework" onclick="openTelegramBot()">📷 Отправить домашку</button>
+
+        <script>
+        function openTelegramBot() {
+            if (window.Telegram.WebApp) {
+                Telegram.WebApp.openTelegramLink('https://t.me/zm99bybot');
+            } else {
+                window.open('https://t.me/zm99bybot', '_blank'); // запасной вариант для браузеров
+            }
+        }
+        </script>
+
     </div>
 
     <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
