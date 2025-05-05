@@ -2,126 +2,201 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Модуль 02 ➖ Вычитание</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль: Наращивание дип-пудрой</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style" onload="this.rel='stylesheet'">
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Poppins', Arial, sans-serif;
-            background: #ffffff;
+            background: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            font-size: 16px;
         }
-        .card {
-            background: #ffffff;
-            margin-top: 40px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease;
-        }
-        h1 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #222;
-        }
-        p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            color: #444;
-            line-height: 1.5;
-        }
-        .progress-container {
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
             width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            margin: 20px 0;
-            height: 20px;
-            overflow: hidden;
-        }
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            border-radius: 10px;
-            transition: width 0.5s ease;
-        }
-        .buttons {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .button-return, .button-back {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 600;
+            padding: 1.5rem 1rem;
+            text-align: center;
             color: #fff;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
-        .button-return:hover, .button-back:hover {
-            background: linear-gradient(135deg, #66BB6A, #388E3C);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .header p {
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+        }
+        .content {
+            padding: 1rem;
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
         }
         footer {
-            margin: 20px 0;
-            font-size: 12px;
+            margin: 1.5rem 0;
+            font-size: 0.75rem;
             color: #aaa;
+            text-align: center;
         }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        .slide-img {
+            width: 100%;
+            margin: 1rem auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            margin: 1rem auto;
+            overflow: hidden;
+        }
+        lite-youtube {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <h1>Модуль: Наращивание дип-пудрой</h1>
+        <p>Изучите техники и материалы</p>
+    </header>
 
-    <div class="card">
-        <h1 id="moduleTitle">Модуль 02 ➖ Вычитание</h1>
-        <p id="moduleText">Узнай, как правильно вычитать числа! 📚</p>
+    <main class="content">
+        <h2>Материалы модуля</h2>
+        <section>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide1.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide1.jpeg" class="slide-img" alt="Введение в наращивание дип-пудрой" loading="lazy">
+            </picture>
+            <div class="video-container">
+                <lite-youtube videoid="tdPefMi1pqY" style="background-image: url('https://img.youtube.com/vi/tdPefMi1pqY/hqdefault.jpg');" aria-label="Видео по наращиванию дип-пудрой"></lite-youtube>
+            </div>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide2.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide2.jpeg" class="slide-img" alt="Техники нанесения дип-пудры" loading="lazy">
+            </picture>
+            <div class="video-container">
+                <lite-youtube videoid="c4vj5lZpylA" style="background-image: url('https://img.youtube.com/vi/c4vj5lZpylA/hqdefault.jpg');" aria-label="Дополнительное видео по дип-пудре"></lite-youtube>
+            </div>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide3.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide3.jpeg" class="slide-img" alt="Подготовка ногтей для дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide4.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide4.jpeg" class="slide-img" alt="Выбор материалов для дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide5.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide5.jpeg" class="slide-img" alt="Процесс нанесения дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide6.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide6.jpeg" class="slide-img" alt="Фиксация дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide7.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide7.jpeg" class="slide-img" alt="Дизайн с дип-пудрой" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide8.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide8.jpeg" class="slide-img" alt="Уход за ногтями после процедуры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide9.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide9.jpeg" class="slide-img" alt="Частые ошибки при нанесении" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide10.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide10.jpeg" class="slide-img" alt="Советы по улучшению техники" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide11.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide11.jpeg" class="slide-img" alt="Инструменты для дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide12.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide12.jpeg" class="slide-img" alt="Сравнение дип-пудры и гель-лака" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide13.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide13.jpeg" class="slide-img" alt="Преимущества дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide14.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide14.jpeg" class="slide-img" alt="Подготовка рабочего места" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide15.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide15.jpeg" class="slide-img" alt="Гигиена и безопасность" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide16.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide16.jpeg" class="slide-img" alt="Удаление дип-пудры" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide17.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide17.jpeg" class="slide-img" alt="Устранение дефектов" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide18.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide18.jpeg" class="slide-img" alt="Работа с клиентами" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide19.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide19.jpeg" class="slide-img" alt="Маркетинг услуг" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide20.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide20.jpeg" class="slide-img" alt="Примеры дизайна" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide21.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide21.jpeg" class="slide-img" alt="Тренды в дизайне ногтей" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide22.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide22.jpeg" class="slide-img" alt="Сложные техники" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide23.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide23.jpeg" class="slide-img" alt="Ремонт ногтей дип-пудрой" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide24.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide24.jpeg" class="slide-img" alt="Часто задаваемые вопросы" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide25.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide25.jpeg" class="slide-img" alt="Ресурсы для обучения" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide26.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide26.jpeg" class="slide-img" alt="Сертификация мастеров" loading="lazy">
+            </picture>
+            <picture>
+                <source srcset="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide27.webp" type="image/webp">
+                <img src="https://chmarakode.github.io/academy-webapp/modules/module-01/Slide27.jpeg" class="slide-img" alt="Итоги модуля" loading="lazy">
+            </picture>
+        </section>
+    </main>
 
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-        </div>
+    <footer>
+        <p>© 2025 Академия. Все права защищены.</p>
+    </footer>
 
-        <p><strong>Примеры:</strong><br>
-        10 - 3 = 7<br>20 - 5 = 15</p>
-
-        <div class="buttons">
-            <a href="https://t.me/zm99bybot" class="button-return" id="returnButton">
-                📷 Вернуться в бот и отправить домашку
-            </a>
-        </div>
-    </div>
-
-    <footer>© 2025 NailDoza Academy. Все права защищены.</footer>
-
-    <script>
-        const moduleNumber = 2;
-        const totalModules = 10;
-        const progress = Math.min((moduleNumber / totalModules) * 100, 100);
-
-        document.getElementById('progressBar').style.width = progress + '%';
-
-        const button = document.getElementById('returnButton');
-        button.addEventListener('click', function () {
-            this.classList.add('loading');
-        });
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.0/src/lite-yt-embed.min.js"></script>
 </body>
 </html>
